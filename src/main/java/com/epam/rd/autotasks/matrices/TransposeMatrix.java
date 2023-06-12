@@ -3,7 +3,6 @@ import java.util.Arrays;
 
 public class TransposeMatrix {
     public static int[][] transpose(int[][] matrix) {
-
       int[][] matrixArray = new int[matrix.length][matrix.length];
 
         int i, j;
