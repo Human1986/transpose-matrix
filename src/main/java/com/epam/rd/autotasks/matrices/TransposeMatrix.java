@@ -1,31 +1,29 @@
 package com.epam.rd.autotasks.matrices;
+
 import java.util.Arrays;
 
 public class TransposeMatrix {
-    public static int[][] transpose(int[][] matrix) {
-      int[][] matrixArray = new int[matrix.length][matrix.length];
 
-        int i, j;
-        for (i = 0; i < matrix.length; i++) {
-            for (j = 0; j < matrix.length; j++) {
-                matrixArray[i][j] = matrix[j][i];
+
+    public static int[][] transpose(int[][] matrix) {
+        int row = matrix.length;
+        int column = matrix[0].length;
+         int[][] transposed = new int[column][row];
+
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < column; j++) {
+                    transposed[j][i] = matrix[i][j];
             }
         }
-        return matrixArray;
+        return transposed;
     }
 
     public static void main(String[] args) {
 
-        System.out.println("Test your code here!\n");
+        int[][] a = {{1, 2}, {7, - 13}};  // int[][] expected = {{1, 7}, {2, -13}};
 
-        // Get a result of your code
+        int[][] b = {{- 4, - 65, 56}, {78, - 13, 32}}; // int[][] expected = {{-4, 78}, {-65, -13}, {56, 32}};
 
-        int[][] matrix = {
-                {1, 2},
-                {7, -13} };
-
-        int[][] result = transpose(matrix);
-        System.out.println(Arrays.deepToString(result).replace("],", "]\n"));
+        System.out.println(Arrays.deepToString(transpose(a)));
     }
-
 }

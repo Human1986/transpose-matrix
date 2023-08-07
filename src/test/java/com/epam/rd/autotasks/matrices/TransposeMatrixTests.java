@@ -5,8 +5,10 @@ import org.junit.jupiter.api.Test;
 public class TransposeMatrixTests {
     @Test
     public void test2x2_1() {
-        int[][] a = { {1, 2}, {7, -13} };
-        int[][] expected = {{1, 7}, {2, -13}};
+        int[][] a = { {1, 2},
+                      {7, -13} };
+        int[][] expected = {{1, 7},
+                            {2, -13}};
         int[][] actual = TransposeMatrix.transpose(a);
         Assertions.assertArrayEquals(expected, actual);
     }
